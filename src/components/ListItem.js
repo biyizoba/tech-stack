@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
-import {Text,
- LayoutAnimation,
-TouchableWithoutFeedback,
-View,
-UIManager} from 'react-native';
+import {Text, TouchableWithoutFeedback, View, UIManager, LayoutAnimation } from 'react-native';
 import { connect } from 'react-redux';
 import {CardSection} from './commons'
 import * as actions from '../actions'
@@ -29,7 +25,7 @@ class ListItem extends Component {
     }
     render() {
         const {title, id} = this.props.library.item;
-        const { titleStyle } = styles;
+        const { titleStyle, descriptionStyle } = styles;
 
         // const { id} = this.props.library;
 
@@ -54,6 +50,10 @@ const styles = {
     titleStyle: {
         fontSize: 18,
         paddingLeft: 15,
+    }, 
+    descriptionStyle:{
+        paddingLeft: 10,
+        paddingRight: 10,
     }
 }
 
